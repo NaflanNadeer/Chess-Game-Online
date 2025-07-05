@@ -1,23 +1,34 @@
 # Online Multiplayer Chess
 
-Description: An online multiplayer chess game. Supports infinite players playing against random opponents on different machines on different networks. This project was created using python 3.7, pygame and the sockets module from python3. It runs on a basic client server system where a server script handles all incoming connections and game management. The clients simply hanlde the UI and game play.
+**Overview:**  
+This is an online multiplayer chess game that supports unlimited players connecting from different machines and networks. It is built using Python 3.7, Pygame, and Python’s built-in `socket` module. The architecture follows a basic client-server model where the server handles connections and game management, while clients manage the user interface and gameplay.
 
-# Required:
+---
+
+## Requirements
 
 - Python 3.x
-- pygame
+- Pygame
 
-# TO MAKE THIS CODE WORK...
+---
 
-You will need to change the server address from within the following two files:
+## How to Run
 
-- client.py
-- server.py
+To run the game, follow these steps:
 
-You will also need to run server.py on some kind of server. After that you can launch two instances of game from anywhere to play online chess.
+1. Open the following files and update the server address:
 
-# Known Bugs:
+   - `client.py`
+   - `server.py`
 
-- Checkmate does not work, if you loose or win you will need to end the game by hitting "q"
-- Very rare bug where a certain move will crash the game
-- No Enpesant Pawn Rule
+2. Run `server.py` on a server or a host machine that allows incoming connections.
+
+3. Start two or more instances of the game on different machines or networks to play chess online.
+
+---
+
+## Known Issues
+
+- Checkmate is not detected; players must manually quit the game using the `Q` key when it ends.
+- Rarely, a specific move may cause the game to crash.
+- En Passant (pawn capture rule) is not implemented.
